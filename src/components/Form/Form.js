@@ -13,6 +13,7 @@ class Form extends Component{
         this.updatePrice=this.updatePrice.bind(this);
         this.updateProductName=this.updateProductName.bind(this);
         this.handleClick=this.handleClick.bind(this);
+        this.clearInputs=this.clearInputs.bind(this);
     }
 
     updateImage(e){
@@ -39,6 +40,13 @@ class Form extends Component{
             this.props.makeNewCard(response.data)
         })
     }
+    clearInputs(){
+        this.setState({
+            image: '',
+            productName: '',
+            price: ''
+        })
+    }
 
     render(){
         return(
@@ -47,6 +55,21 @@ class Form extends Component{
                 <input onChange={this.updateProductName} placeholder='product name'/>
                 <input onChange={this.updatePrice} placeholder='price'/>    
                 <button onClick={this.handleClick}>Add Product</button>
+                <button onClick={this.clearInputs}>Cancel</button>
+
+                <div key='inventory_display'>
+                    {this.props.inventory.map(e => {
+                        const {image, productName, price} = e;
+
+                        return(
+                            <div>
+                                <img src={image}></img>
+                                <h1>{productName}</h1>
+                                <h1>{price}</h1>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         )
     }

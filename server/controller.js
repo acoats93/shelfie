@@ -28,8 +28,4 @@ module.exports = {
 
 }
 
-/* post man is just returning completely blank fields. not showing errors, not showing my catch statements. i'm lost and at this point
-don't even know what to check anymore. im sorry. i just feel completely lost as to what to try. i tried changing servers, rewriting my code,
-commenting stuff out, etc. i just feel completely defeated. its not like i haven't been putting the effort in either (in my mind). i follow along well in class,
-have been reviewing all of our afternoon projects, and studying have been several hours a night. i just don't know what to do. 
-*/
+//i'm sorry. i know i can do better than this. i let myself get overwhelmed and couldn't get past my mental block for way too long.
